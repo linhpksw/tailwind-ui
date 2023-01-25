@@ -1,0 +1,28 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<template>
+  <div class="bg-indigo-700">
+    <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight text-white">Frequently asked questions</h2>
+      <div class="mt-6 border-t border-indigo-300 border-opacity-25 pt-10">
+        <dl class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12 md:space-y-0">
+          <div v-for="faq in faqs" :key="faq.id">
+            <dt class="text-lg font-medium leading-6 text-white">{{ faq.question }}</dt>
+            <dd class="mt-2 text-base text-indigo-200">{{ faq.answer }}</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+const faqs = [
+  {
+    id: 1,
+    question: "What's the best thing about Switzerland?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  // More questions...
+]
+</script>
